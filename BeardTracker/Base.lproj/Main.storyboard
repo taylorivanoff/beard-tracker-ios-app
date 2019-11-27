@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nnf-Og-um7">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Beard_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hke-fJ-4fX" customClass="SwiftyRecordButton" customModule="Beard_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="150" y="572" width="75" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="8Mb-dy-Ned"/>
+                                    <constraint firstAttribute="width" constant="75" id="YVv-UJ-n1R"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hke-fJ-4fX" secondAttribute="bottom" constant="20" symbolic="YES" id="0OM-Pc-Ze1"/>
+                            <constraint firstItem="hke-fJ-4fX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="22M-gB-uKl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cej-0l-Yry"/>
+                    <connections>
+                        <outlet property="captureButton" destination="hke-fJ-4fX" id="nng-T2-6kL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="-595"/>
+        </scene>
+        <!--Main Menu Controller-->
+        <scene sceneID="TAa-og-NZx">
+            <objects>
+                <viewController storyboardIdentifier="mainMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nnf-Og-um7" customClass="MainMenuController" customModule="Beard_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tLK-am-fQO"/>
+                        <viewControllerLayoutGuide type="bottom" id="UKu-4G-69U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OyZ-id-zo9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSl-sN-l3E">
+                                <rect key="frame" x="125" y="271" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="6N7-5H-Bw3"/>
+                                    <constraint firstAttribute="height" constant="125" id="tW8-16-K0C"/>
+                                </constraints>
+                                <state key="normal" image="captureButton">
+                                    <color key="titleColor" red="0.36765944960000002" green="0.3002353311" blue="0.29867276549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="captureButton:" destination="nnf-Og-um7" eventType="touchUpInside" id="OLr-oc-MhO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40B-gM-Wx9">
+                                <rect key="frame" x="125" y="456" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="8Xk-QG-mE8"/>
+                                    <constraint firstAttribute="height" constant="125" id="edk-c9-PKq"/>
+                                </constraints>
+                                <state key="normal" image="timelapseButton">
+                                    <color key="titleColor" red="0.36765944960000002" green="0.3002353311" blue="0.29867276549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="progressButton:" destination="nnf-Og-um7" eventType="touchUpInside" id="3EH-BQ-byT"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="pZM-8u-2cI">
+                                <rect key="frame" x="67" y="81" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="tOF-SH-4J9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="show mo' tomorrow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVp-fC-BiY">
+                                <rect key="frame" x="99.5" y="238" width="176.5" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.31507185100000001" green="0.1854182184" blue="0.098737604919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FkY-2O-zP2">
+                                <rect key="frame" x="334" y="620" width="25" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.36765944960000002" green="0.3002353311" blue="0.29867276549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="trash" catalog="system">
+                                    <color key="titleColor" red="0.26696568729999998" green="0.1537858248" blue="0.081206865609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="nnf-Og-um7" eventType="touchUpInside" id="Qlb-c1-95U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.99998837709999999" blue="0.7334590554" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="QSl-sN-l3E" firstAttribute="centerX" secondItem="fVp-fC-BiY" secondAttribute="centerX" id="9ui-cu-hfT"/>
+                            <constraint firstItem="40B-gM-Wx9" firstAttribute="top" secondItem="QSl-sN-l3E" secondAttribute="bottom" constant="60" id="BQC-ls-LY9"/>
+                            <constraint firstItem="pZM-8u-2cI" firstAttribute="centerX" secondItem="fVp-fC-BiY" secondAttribute="centerX" id="OIY-9J-6wZ"/>
+                            <constraint firstItem="QSl-sN-l3E" firstAttribute="centerX" secondItem="OyZ-id-zo9" secondAttribute="centerX" id="VdT-Ao-Xjo"/>
+                            <constraint firstItem="pZM-8u-2cI" firstAttribute="top" secondItem="tLK-am-fQO" secondAttribute="bottom" constant="81" id="ZFd-OH-XoU"/>
+                            <constraint firstItem="QSl-sN-l3E" firstAttribute="centerY" secondItem="OyZ-id-zo9" secondAttribute="centerY" id="a7C-zs-bL0"/>
+                            <constraint firstItem="fVp-fC-BiY" firstAttribute="top" secondItem="pZM-8u-2cI" secondAttribute="bottom" constant="29" id="ccN-hd-lyC"/>
+                            <constraint firstItem="pZM-8u-2cI" firstAttribute="leading" secondItem="OyZ-id-zo9" secondAttribute="leadingMargin" constant="51" id="ny0-0Q-NSA"/>
+                            <constraint firstItem="40B-gM-Wx9" firstAttribute="leading" secondItem="QSl-sN-l3E" secondAttribute="leading" id="va4-Vr-XJ0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captureButton" destination="QSl-sN-l3E" id="6EG-YO-N9N"/>
+                        <outlet property="cooldownLabel" destination="fVp-fC-BiY" id="Cx5-5r-kQl"/>
+                        <outlet property="progressButton" destination="40B-gM-Wx9" id="oFh-ie-HhN"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="mainToCamera" modalPresentationStyle="fullScreen" id="gQ4-CX-62k"/>
+                        <segue destination="uaI-0o-NFE" kind="presentation" identifier="mainToProgress" modalPresentationStyle="fullScreen" id="K4Q-TD-X90"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sOZ-2N-O63" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-950" y="-278"/>
+        </scene>
+        <!--Progress View Controller-->
+        <scene sceneID="Db9-Ui-GaS">
+            <objects>
+                <viewController id="uaI-0o-NFE" customClass="ProgressViewController" customModule="Beard_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vnr-1h-Eyf"/>
+                        <viewControllerLayoutGuide type="bottom" id="3nr-Ph-UPm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rmv-1T-hTd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yK-wB-ebO">
+                                <rect key="frame" x="300" y="550" width="33" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1yK-wB-ebO" firstAttribute="trailing" secondItem="Rmv-1T-hTd" secondAttribute="trailingMargin" constant="-26" id="6u8-dw-A4I"/>
+                            <constraint firstItem="3nr-Ph-UPm" firstAttribute="top" secondItem="1yK-wB-ebO" secondAttribute="bottom" constant="93" id="sbG-E0-UIw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e3D-ai-TlR"/>
+                    <connections>
+                        <outlet property="notEnoughDaysLabel" destination="1yK-wB-ebO" id="Z9B-HN-9TP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oex-28-5xB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="captureButton" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="logo" width="250" height="190"/>
+        <image name="timelapseButton" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="trash" catalog="system" width="60" height="64"/>
+    </resources>
+</document>
